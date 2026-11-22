@@ -1,0 +1,108 @@
+# ==================================================
+# PYTHON
+# ==================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==================================================
+# IDEs AND EDITORS
+# ==================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ==================================================
+# SYSTEM
+# ==================================================
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# ==================================================
+# ENVIRONMENT VARIABLES / SECRETS
+# ==================================================
+.env
+.env.*
+!.env.example
+
+# ==================================================
+# LOGS AND TENSORBOARD
+# ==================================================
+*.log
+logs/
+runs/
+wandb/
+tensorboard/
+events.out.tfevents.*
+
+# ==================================================
+# TRAINING CHECKPOINTS
+# ==================================================
+*.pt
+*.pth
+*.ckpt
+
+# ==================================================
+# TEMPORARY TRAINING / EVALUATION DATA
+# ==================================================
+# Trajectories and generated terrain datasets
+eval_suite/policy_*/traj.npz
+eval_suite/terrain_tiles.npz
+
+# Evaluation videos
+eval_suite/policy_*/videos/
+
+# ==================================================
+# PYTHON GENERATED DATA
+# ==================================================
+*.tmp
+*.bak
+*.orig
+
+# ==================================================
+# CMAKE / C++ BUILD
+# ==================================================
+**/build/
+**/cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Compiled binaries
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# ==================================================
+# LOCAL MUJOCO INSTALLATION
+# ==================================================
+unitree_mujoco/mujoco
+
+# ==================================================
+# GENERATED TEMPORARY FILES
+# ==================================================
+*.pid
+*.seed
