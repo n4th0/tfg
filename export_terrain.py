@@ -8,6 +8,8 @@ Crea dentro de la carpeta del robot (unitree_robots/go2):
     python3 export_terrain.py terrain_tiles.npz --list
     python3 export_terrain.py terrain_tiles.npz --type stairs_inv --row 9
     python3 export_terrain.py terrain_tiles.npz --all
+
+    ❯ python3 export_terrain.py eval_suite/terrain_tiles.npz --type rough --row 9
 """
 import argparse
 import os

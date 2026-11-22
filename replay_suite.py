@@ -3,6 +3,13 @@ import os
 
 import numpy as np
 
+
+"""
+
+❯ python3 replay_suite.py --go2_xml ../unitree_mujoco/unitree_robots/go2/go2.xml eval_suite/ policy_vel_9999
+
+"""
+
 ap = argparse.ArgumentParser()
 ap.add_argument("dir", help="carpeta de resultados, p. ej. eval_vid")
 ap.add_argument("policy", help="nombre de la política (subcarpeta)")

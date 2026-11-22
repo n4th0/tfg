@@ -9,6 +9,12 @@ import pandas as pd
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
+"""
+❯ python3 compare_policies.py eval_suite
+
+"""
+
+
 ap = argparse.ArgumentParser()
 ap.add_argument("dir", nargs="?", default="eval_suite")
 ap.add_argument("--boot", type=int, default=5000)
