@@ -1,0 +1,37 @@
+Redacta en LaTeX la sección de resultados de UNA prueba de mi TFG (locomoción del robot
+Unitree Go2 con Isaac Lab y PPO). Español académico, tercera persona.
+
+PRUEBA: <<modelo flat default>>   NOMBRE DE FICHEROS: <<modelo_flat>>
+
+COMANDO DE ENTRENAMIENTO:
+uv run isaaclab train --rl_library rsl_rl --task Isaac-Velocity-Flat-UnitreeGo2 --num_envs 4096
+
+RESUMEN DE MÉTRICAS (JSON):
+
+...
+
+
+DATOS EXTRA (escribe "desconocido" si no los sabes):
+- Qué distingue este modelo/configuración: 
+- Hiperparámetros de PPO y pesos de recompensa: env.yaml
+
+ESTRUCTURA (\section con \label{sec:<nombre>}):
+1. Párrafo de configuración + tabla (booktabs) con tarea, nº de entornos, iteraciones, duración y pasos/s.
+2. Evolución del aprendizaje: figura figuras/<nombre>_recompensa.png.
+3. Seguimiento y estabilidad: figuras <nombre>_seguimiento.png y <nombre>_exito.png.
+4. Tabla con los términos de recompensa finales y breve comentario.
+5. Tabla con Hiperparámetros
+6. Valoración: 1 párrafo y conclusión de 2-3 frases.
+
+FORMATO
+- Tablas: \begin{table}[H], \centering, \caption, \label, tabular con \toprule \midrule \bottomrule.
+- Figuras: \begin{figure}[H], \centering, \includegraphics[width=0.85\textwidth]{...}, \caption, \label.
+- Referencias con Figura~\ref{} y Tabla~\ref{}. Punto decimal. Nombres de métricas en \texttt{} con \_ escapado.
+- Devuelve SOLO el bloque LaTeX, sin preámbulo.
+
+REGLAS
+- Usa solo cifras del JSON (o sumas/diferencias simples de ellas). No inventes nada; si falta un dato, escribe [FALTA: ...].
+- Separa lo observado de lo interpretado (usa "sugiere", "una lectura razonable es").
+- Si "cambio_ultima_ventana_vs_anterior_pct" es mayor que 5, di que el entrenamiento NO ha convergido.
+- Son métricas de entrenamiento y de una sola ejecución: dilo en la valoración.
+- Al final, fuera del bloque, lista lo que debo verificar.

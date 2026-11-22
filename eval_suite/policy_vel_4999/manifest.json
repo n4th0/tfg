@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-22 11:58:31",
+  "argv": [
+    "eval_suite.py",
+    "--policy",
+    "policy_rough_5000=politicas/politica_rough_5000.onxx",
+    "--policy",
+    "policy_rough_9999=politicas/politica_rough_9999.onxx",
+    "--policy",
+    "policy_smooth_5000=politicas/politica_smooth_5000.onxx",
+    "--policy",
+    "policy_smooth_7999=politicas/politica_smooth_7999.onxx",
+    "--policy",
+    "policy_stairs_3000=politicas/politica_stairs_3000.onxx",
+    "--policy",
+    "policy_stairs_5999=politicas/politica_stairs_5999.onxx",
+    "--policy",
+    "policy_vel_3000=politicas/politica_velocity_3000.onxx",
+    "--policy",
+    "policy_vel_4999=politicas/politica_velocity_4999.onxx",
+    "--policy",
+    "policy_vel_9999=politicas/politica_velocity_9999.onxx",
+    "--num_envs",
+    "720",
+    "--record"
+  ],
+  "args": {
+    "policy": [
+      "policy_rough_5000=politicas/politica_rough_5000.onxx",
+      "policy_rough_9999=politicas/politica_rough_9999.onxx",
+      "policy_smooth_5000=politicas/politica_smooth_5000.onxx",
+      "policy_smooth_7999=politicas/politica_smooth_7999.onxx",
+      "policy_stairs_3000=politicas/politica_stairs_3000.onxx",
+      "policy_stairs_5999=politicas/politica_stairs_5999.onxx",
+      "policy_vel_3000=politicas/politica_velocity_3000.onxx",
+      "policy_vel_4999=politicas/politica_velocity_4999.onxx",
+      "policy_vel_9999=politicas/politica_velocity_9999.onxx"
+    ],
+    "task": "Unitree-Go2-Velocity",
+    "num_envs": 720,
+    "seed": 0,
+    "duration": 6.0,
+    "vx": 0.6,
+    "dyn": "nominal",
+    "no_noise": false,
+    "record": true,
+    "only_terrain": false,
+    "out": "eval_suite",
+    "enable_cameras": false,
+    "xr": false,
+    "device": "cuda:0",
+    "cpu": false,
+    "verbose": false,
+    "info": false,
+    "rendering_mode": null,
+    "kit_args": "",
+    "anim_recording_enabled": false,
+    "anim_recording_start_time": 0,
+    "anim_recording_stop_time": 10,
+    "headless": true,
+    "hide_ui": true,
+    "create_new_stage": false,
+    "physics_gpu": 0,
+    "active_gpu": 0
+  },
+  "policy": "politicas/politica_velocity_4999.onxx",
+  "seconds": 139,
+  "hashes": {
+    "onnx": "5b1ea9a7d17d7ed87a9b937148aa9be5bea9c66efbe59586bfa87a6a022827fa",
+    "onnx_data": null,
+    "deploy_yaml": null
+  },
+  "step_dt": 0.02,
+  "decimation": 4,
+  "num_envs": 720,
+  "rows": 10,
+  "cols": 18,
+  "cols_per_type": 2,
+  "types": [
+    "flat",
+    "rough",
+    "slope_up",
+    "slope_down",
+    "stairs_pyr",
+    "stairs_inv",
+    "boxes",
+    "obstacles",
+    "waves"
+  ],
+  "terrain_specs": {
+    "flat": "MeshPlaneTerrainCfg(function=<function flat_terrain at 0x7baac7753420>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None)",
+    "rough": "HfRandomUniformTerrainCfg(function=<function random_uniform_terrain at 0x7baac78822a0>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=0.25, horizontal_scale=0.1, vertical_scale=0.005, slope_threshold=None, noise_range=(0.01, 0.08), noise_step=0.01, downsampled_scale=None)",
+    "slope_up": "HfPyramidSlopedTerrainCfg(function=<function pyramid_sloped_terrain at 0x7baac7731c60>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=0.25, horizontal_scale=0.1, vertical_scale=0.005, slope_threshold=None, slope_range=(0.0, 0.5), platform_width=2.0, inverted=False)",
+    "slope_down": "HfInvertedPyramidSlopedTerrainCfg(function=<function pyramid_sloped_terrain at 0x7baac7731c60>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=0.25, horizontal_scale=0.1, vertical_scale=0.005, slope_threshold=None, slope_range=(0.0, 0.5), platform_width=2.0, inverted=True)",
+    "stairs_pyr": "MeshPyramidStairsTerrainCfg(function=<function pyramid_stairs_terrain at 0x7baac7753880>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=1.0, step_height_range=(0.03, 0.2), step_width=0.3, platform_width=3.0, holes=False)",
+    "stairs_inv": "MeshInvertedPyramidStairsTerrainCfg(function=<function inverted_pyramid_stairs_terrain at 0x7baac7753920>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=1.0, step_height_range=(0.03, 0.2), step_width=0.3, platform_width=3.0, holes=False)",
+    "boxes": "MeshRandomGridTerrainCfg(function=<function random_grid_terrain at 0x7baac77539c0>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, grid_width=0.45, grid_height_range=(0.02, 0.15), platform_width=2.0, holes=False)",
+    "obstacles": "HfDiscreteObstaclesTerrainCfg(function=<function discrete_obstacles_terrain at 0x7baac7731ee0>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=0.0, horizontal_scale=0.1, vertical_scale=0.005, slope_threshold=None, obstacle_height_mode='choice', obstacle_width_range=(0.4, 1.0), obstacle_height_range=(0.05, 0.2), num_obstacles=40, platform_width=2.0)",
+    "waves": "HfWaveTerrainCfg(function=<function wave_terrain at 0x7baac7732020>, proportion=1.0, size=(10.0, 10.0), flat_patch_sampling=None, border_width=0.25, horizontal_scale=0.1, vertical_scale=0.005, slope_threshold=None, amplitude_range=(0.02, 0.12), num_waves=4)"
+  },
+  "mesh_source": "escena USD (difiere de la regenerada)",
+  "cmds": {
+    "fwd_0.3": [
+      0.3,
+      0,
+      0
+    ],
+    "fwd_0.6": [
+      0.6,
+      0,
+      0
+    ],
+    "fwd_1.0": [
+      1.0,
+      0,
+      0
+    ],
+    "back_0.4": [
+      -0.4,
+      0,
+      0
+    ],
+    "lat_0.3": [
+      0,
+      0.3,
+      0
+    ],
+    "yaw_1.0": [
+      0,
+      0,
+      1.0
+    ],
+    "mix": [
+      0.5,
+      0.2,
+      0.5
+    ],
+    "stand": [
+      0,
+      0,
+      0
+    ]
+  },
+  "mags": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "push": {
+    "kind": "cambio instant\u00e1neo de la velocidad lineal del tronco (\u0394v, ejes del mundo); no es una fuerza",
+    "time_s": 2.0,
+    "cmd": [
+      0.5,
+      0.0,
+      0.0
+    ],
+    "recovery": "error de velocidad < 0.25 m/s e inclinaci\u00f3n < 0.2 rad durante 0.5 s"
+  },
+  "success": "no cae y recorre >= 50 % del desplazamiento de referencia (arco integrado del comando); sin traslaci\u00f3n: no cae",
+  "fall": "terminaci\u00f3n por base_contact o bad_orientation",
+  "observation_terms": [
+    "base_ang_vel",
+    "projected_gravity",
+    "velocity_commands",
+    "joint_pos_rel",
+    "joint_vel_rel",
+    "last_action"
+  ],
+  "observation_dims": [
+    [
+      3
+    ],
+    [
+      3
+    ],
+    [
+      3
+    ],
+    [
+      12
+    ],
+    [
+      12
+    ],
+    [
+      12
+    ]
+  ],
+  "action_terms": [
+    "JointPositionAction"
+  ],
+  "joint_names": [
+    "FL_hip_joint",
+    "FR_hip_joint",
+    "RL_hip_joint",
+    "RR_hip_joint",
+    "FL_thigh_joint",
+    "FR_thigh_joint",
+    "RL_thigh_joint",
+    "RR_thigh_joint",
+    "FL_calf_joint",
+    "FR_calf_joint",
+    "RL_calf_joint",
+    "RR_calf_joint"
+  ],
+  "torch": "2.11.0+cu128",
+  "ort": "1.32.0",
+  "isaaclab": "no disponible: module 'isaaclab' has no attribute '__version__'",
+  "git_commit": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+  "git_dirty": true
+}

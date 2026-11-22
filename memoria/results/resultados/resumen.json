@@ -1,0 +1,77 @@
+{
+  "config": {
+    "comando": "uv run isaaclab -p scripts/reinforcement_learning/train.py --task Isaac-Velocity-Rough-Unitree-Go2-v0 --num_envs 4096",
+    "tarea": "Isaac-Velocity-Rough-Unitree-Go2-v0",
+    "num_envs": 4096,
+    "max_iterations_cli": null,
+    "seed": null
+  },
+  "iteraciones": 1500,
+  "duracion_s": 1763.4,
+  "ventana_final_iters": 250,
+  "reward": {
+    "inicial": -0.6981309056282043,
+    "final": 23.374746322631836,
+    "media_ventana_final": 22.83089331817627,
+    "std_ventana_final": 0.8192656662340763,
+    "maximo": 25.05864715576172,
+    "iter_maximo": 932,
+    "iter_primer_positivo": 63,
+    "iter_reward_10": 165,
+    "iter_reward_20": 631,
+    "iter_reward_30": null
+  },
+  "episodio": {
+    "longitud_inicial": 12.567009925842285,
+    "longitud_final": 949.75,
+    "iter_long_500": 25,
+    "iter_long_900": 44,
+    "timeout_final": 0.8821513056755066,
+    "base_contact_final": 0.1183369979262352,
+    "base_contact_pico": 0.6684061884880066,
+    "iter_base_contact_pico": 43
+  },
+  "seguimiento": {
+    "error_vel_xy_inicial": 0.8350930213928223,
+    "error_vel_xy_final": 0.22650346159934998,
+    "error_vel_yaw_inicial": 0.7909662127494812,
+    "error_vel_yaw_final": 0.27979034185409546,
+    "success_rate_final": 0.9861111640930176,
+    "iter_success_50": 444,
+    "iter_success_90": 667
+  },
+  "terminos_recompensa_final": {
+    "action_rate_l2": -0.07606490701436996,
+    "ang_vel_xy_l2": -0.1156446784734726,
+    "dof_acc_l2": -0.12967610359191895,
+    "dof_pos_limits": 0.0,
+    "dof_torques_l2": -0.09919636696577072,
+    "feet_air_time": -0.001405696151778102,
+    "flat_orientation_l2": 0.0,
+    "lin_vel_z_l2": -0.05005066841840744,
+    "track_ang_vel_z_exp": 0.5088304877281189,
+    "track_lin_vel_xy_exp": 1.134498953819275
+  },
+  "ppo": {
+    "entropia_inicial": 17.036697387695312,
+    "entropia_final": 7.513633728027344,
+    "std_politica_inicial": 1.001029372215271,
+    "std_politica_final": 0.45664533972740173,
+    "value_loss_inicial": 0.4287795424461365,
+    "value_loss_final": 0.017710909247398376,
+    "surrogate_final": -0.008996956050395966,
+    "lr_inicial": 9.999999747378752e-06,
+    "lr_final": 0.00038443360244855285,
+    "lr_pico": 0.0029192925430834293
+  },
+  "rendimiento": {
+    "fps_medio": 84010.61409395972,
+    "t_iter_final_s": 1.1367771701812743,
+    "t_recoleccion_final_s": 1.0696260204315187,
+    "t_aprendizaje_final_s": 0.06715114974975586
+  },
+  "avisos": [
+    "feet_air_time es negativo al final: los pasos son más cortos que el umbral de tiempo en el aire.",
+    "Todas las métricas son de entrenamiento (con ruido de exploración). No demuestran buen comportamiento en evaluación/despliegue; hace falta play.py o una prueba sim-to-sim."
+  ]
+}
